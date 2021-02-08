@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="210dp"
+        tools:layout_editor_absoluteY="120dp">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/countText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="〇手目です"
+            android:textAlignment="center"
+            android:textSize="36sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/pairText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="〇ペア"
+            android:textAlignment="center"
+            android:textSize="36sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/missText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="〇ミス"
+            android:textAlignment="center"
+            android:textSize="36sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <androidx.gridlayout.widget.GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:columnCount="4"
+            app:rowCount="3">
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="101sp"
+                android:layout_height="100sp"
+                android:onClick="open0"
+                android:scaleType="fitCenter"
+                app:layout_column="0"
+                app:layout_row="0"
+                app:srcCompat="@drawable/question" />
+
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="101sp"
+                android:layout_height="100sp"
+                android:onClick="open1"
+                android:scaleType="fitCenter"
+                app:layout_column="1"
+                app:layout_row="0"
+                app:srcCompat="@drawable/question" />
+
+            <ImageButton
+                android:id="@+id/imageButton3"
+                android:layout_width="101sp"
+                android:layout_height="100sp"
+                android:onClick="open2"
+                android:scaleType="fitCenter"
+                app:layout_column="2"
+                app:layout_row="0"
+                app:srcCompat="@drawable/question" />
+
+            <ImageButton
+                android:id="@+id/imageButton4"
+                android:layout_width="101sp"
+                android:layout_height="100sp"
+                android:onClick="open3"
+                android:scaleType="fitCenter"
+                app:layout_column="3"
+                app:layout_row="0"
+                app:srcCompat="@drawable/question" />
+
+            <ImageButton
+                android:id="@+id/imageButton5"
+                android:layout_width="101sp"
+                android:layout_height="100sp"
+                android:onClick="open4"
+                android:scaleType="fitCenter"
+                app:layout_column="0"
+                app:layout_row="1"
+                app:srcCompat="@drawable/question" />
+
+            <ImageButton
+                android:id="@+id/imageButton6"
+                android:layout_width="101sp"
+                android:layout_height="100sp"
+                android:onClick="open5"
+                android:scaleType="fitCenter"
+                app:layout_column="1"
+                app:layout_row="1"
+                app:srcCompat="@drawable/question" />
+
+            <ImageButton
+                android:id="@+id/imageButton7"
+                android:layout_width="101sp"
+                android:layout_height="100sp"
+                android:onClick="open6"
+                android:scaleType="fitCenter"
+                app:layout_column="2"
+                app:layout_row="1"
+                app:srcCompat="@drawable/question" />
+
+            <ImageButton
+                android:id="@+id/imageButton8"
+                android:layout_width="101sp"
+                android:layout_height="100sp"
+                android:onClick="open7"
+                android:scaleType="fitCenter"
+                app:layout_column="3"
+                app:layout_row="1"
+                app:srcCompat="@drawable/question" />
+
+            <ImageButton
+                android:id="@+id/imageButton9"
+                android:layout_width="101sp"
+                android:layout_height="100sp"
+                android:onClick="open8"
+                android:scaleType="fitCenter"
+                app:layout_column="0"
+                app:layout_row="2"
+                app:srcCompat="@drawable/question" />
+
+            <ImageButton
+                android:id="@+id/imageButton10"
+                android:layout_width="101sp"
+                android:layout_height="100sp"
+                android:onClick="open9"
+                android:scaleType="fitCenter"
+                app:layout_column="1"
+                app:layout_row="2"
+                app:srcCompat="@drawable/question" />
+
+            <ImageButton
+                android:id="@+id/imageButton11"
+                android:layout_width="101sp"
+                android:layout_height="100sp"
+                android:onClick="open10"
+                android:scaleType="fitCenter"
+                app:layout_column="2"
+                app:layout_row="2"
+                app:srcCompat="@drawable/question" />
+
+            <ImageButton
+                android:id="@+id/imageButton12"
+                android:layout_width="101sp"
+                android:layout_height="100sp"
+                android:onClick="open11"
+                android:scaleType="fitCenter"
+                app:layout_column="3"
+                app:layout_row="2"
+                app:srcCompat="@drawable/question" />
+        </androidx.gridlayout.widget.GridLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
