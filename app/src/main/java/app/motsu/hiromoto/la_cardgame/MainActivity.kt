@@ -84,7 +84,7 @@ class MainActivity : AppCompatActivity() {
                     pairText.text = (++pairCount).toString() + "ペアGET！"
                 } else { // 絵柄が違う
                     missText.text = (++missCount).toString() + "ミス..."
-                    missText.text = missText.text as String + pairText.text
+
                     // ボタンを元に戻す
                     btn.setImageResource(questionPict)
                     imageButtons[beforeCard].setImageResource(questionPict)
