@@ -24,7 +24,8 @@ class MainActivity : AppCompatActivity() {
     val imageButtons = mutableListOf<ImageButton>()
     // val hoge: Array<Boolean> = Array(5) { false }
     // こんな書き方もできる
-    var checkList = mutableListOf<Boolean>(false,false,false,false,false,false,false,false,false,false,false,false)
+    // なぬ！そっちにします〇　もつ
+    var checkList: Array<Boolean> = Array(12){false}
     var turncount: Int = 0
     var beforeCard = -1
     var pairCount = 0
@@ -71,32 +72,31 @@ class MainActivity : AppCompatActivity() {
             // カードをめくる
             btn.setImageResource(cardPicts[rank[i]])
 
-//                    // 偶数手なら1枚目のカード
-//                    if (turncount % 2 == 0) {
-//                        // 先カードに保存
-//                        beforeCard = i
-//
-//                    } else { // 奇数手
-//                        // 絵柄が同じ
-//                        if (rank[beforeCard] == rank[i]) {
-//                            // ペアカウントを追加
-//                            pairText.text = (++pairCount).toString() + "ペアGET！"
-//                        } else { // 絵柄が違う
-//                            missText.text = (++missCount).toString() + "ミス..."
-//                            //                        var l:Int = 0
-//                            //                        for(k:Int in 0 .. 1000000000){
-//                            //                            l = (k*2)
-//                            //                            l = l + 1
-//                            //                        }
-//                            // ボタンを元に戻す
-//                            btn.setImageResource(questionPict)
-//                            imageButtons[beforeCard].setImageResource(questionPict)
-//                            // 先ボタンを削除
-//                            beforeCard = -1
-//                        }
-//                    }
-//                    // ターン数
-//                    countText.text = (++turncount).toString() + "手目です"
+            // 偶数手なら1枚目のカード
+            if (turncount % 2 == 0) {
+                // 先カードに保存
+                beforeCard = i
+
+            } else { // 奇数手
+                // 絵柄が同じ
+                if (rank[beforeCard] == rank[i]) {
+                    // ペアカウントを追加
+                    pairText.text = (++pairCount).toString() + "ペアGET！"
+                } else { // 絵柄が違う
+                    missText.text = (++missCount).toString() + "ミス..."
+                    missText.text = missText.text as String + pairText.text
+                    // ボタンを元に戻す
+                    btn.setImageResource(questionPict)
+                    imageButtons[beforeCard].setImageResource(questionPict)
+                    checkList[i] = false
+                    checkList[beforeCard] = false
+
+                    // 先ボタンを削除
+                    beforeCard = -1
+                }
+            }
+            // ターン数
+            countText.text = (++turncount).toString() + "手目です"
         }
     }
 
